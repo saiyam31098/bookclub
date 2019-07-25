@@ -46,10 +46,6 @@
 
 			?>
 			 <tr>
-                            <td align="center">
-                              <a class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                              <a class="btn btn-danger"><em class="fa fa-trash"></em></a>
-                            </td>
                             <td class="hidden-xs"><?php echo $row[0] ?></td>
                             <td><?php echo $row[1] ?></td>
                             <td><?php echo $row[5] ?></td>
