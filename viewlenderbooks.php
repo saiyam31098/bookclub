@@ -62,8 +62,7 @@
                         <th>Book Name</th>
                         <th>Condition</th>
                         <th>isAvailable</th>
-                        <th>Action</th>
-                    </tr> 
+                    </tr>
                   </thead>
                   <tbody>
 
@@ -72,18 +71,18 @@
   				{
 
   			?>
-  			
+
                           <tr>
                             <td align="center">
-                              <a href="brand_update.php?brand_id=<?php echo $row[0] ?>" class="btn btn-default"><em class="fa fa-pencil"></em></a>
-                              <a href="javascript:del(<?php echo $row[0] ?>)" class="btn btn-danger"><em class="fa fa-trash"></em></a>
+                              <a href="brand_update.php?brand_id=<?php echo $row1[0] ?>" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                              <a href="javascript:del(<?php echo $row1[0] ?>)" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                             </td>
                             <td class="hidden-xs"><?php echo $row1[0] ?></td>
                             <td><?php echo $row1[1] ?></td>
                             <td><?php echo $row1[8] ?></td>
                             <td><?php echo $row1[9] ?></td>
                           </tr>
-                       
+
         <?php
           }
         }
