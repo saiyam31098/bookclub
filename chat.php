@@ -2,6 +2,20 @@
 
 	<head>
 <?php include("header.php"); ?>
+<style>
+
+textarea {
+	border-radius: 10px;
+	height: 40px;
+	width: 66rem;
+	padding: 5px;
+}
+
+textarea:focus {
+	outline: none !important;
+}
+
+</style>
   	</head>
 
 	<body>
@@ -43,7 +57,7 @@
       }
       ?><br/>
       <center><form name="frm1" action="processChat.php">
-          Message: <textarea name="comment"></textarea><br/>
+        	<textarea name="comment" placeholder="Type your message"></textarea><br/>
           <input type="submit" value="Submit">
         </form></center>
 
