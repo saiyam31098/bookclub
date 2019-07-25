@@ -10,6 +10,7 @@
     }
   }
 </script>
+<?php include("header.php"); ?>
   	</head>
 
 	<body>

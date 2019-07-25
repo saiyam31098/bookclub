@@ -3,6 +3,7 @@
   <title>Book Club - SignUp</title>
   <link rel="stylesheet" href="style.css">
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300' rel='stylesheet' type='text/css'>
+  <?php include("header.php"); ?>
 </head>
 	<body>
 
@@ -28,7 +29,7 @@
 			<input type="submit" name="submit" value="Submit">
 
 
-		
+
     <p>If already an existing user? Please click <a href="login.php">here</a> to Login!</p>
     </form>
 		<?php

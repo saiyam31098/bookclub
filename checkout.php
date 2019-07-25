@@ -1,4 +1,7 @@
 <html>
+<head>
+	<?php include("header.php"); ?>
+</head>
 
 	<body>
         <center><h2>Order Placed!!</h2></center>
