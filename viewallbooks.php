@@ -41,22 +41,24 @@
                         <th>isAvailable</th>
                     </tr> 
                   </thead>
+
+          <tbody>
   			<?php
   				while($row1 = mysqli_fetch_array($res1))
   				{
 
   			?>
-          <tbody>
                           <tr>
                             <td class="hidden-xs"><?php echo $row1[0] ?></td>
                             <td><?php echo $row1[1] ?></td>
                             <td><?php echo $row1[8] ?></td>
                             <td><?php echo $row1[9] ?></td>
                           </tr>
-                        </tbody>
         <?php
           }
          ?>
+         
+                        </tbody>
          </table>
        </div>
             </div>
