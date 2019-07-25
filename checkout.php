@@ -34,7 +34,7 @@
 
     $or = "update cart set status = 'complete' where cid = ".$row[0]."";
     // echo $or;
-    mysqli_query($cn, $or);
+    mysqli_query($or, $cn);
 
     $qr1 = "select OrderCount from books_details where bname='".$row[2]."'";
     // echo $qr1;
@@ -44,7 +44,7 @@
 
     $sum = $row1[0] + 1;
     $qr2 = "update books_details set OrderCount = ".$sum." where bname = '".$row[2]."'";
-    mysqli_query($cn, $qr2);
+    mysqli_query($qr2, $cn);
   }
 
     ?>

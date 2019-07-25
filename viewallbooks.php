@@ -2,10 +2,10 @@
 
 	<head>
 <?php include("header.php"); ?>
+<link href="style.css" rel="stylesheet" type="text/css">
   	</head>
 
 	<body>
-    <center><h1>ALL BOOKS</h1></center>
 
 		<?php
 			include("connect.php");
@@ -39,7 +39,7 @@
                         <th>Book Name</th>
                         <th>Condition</th>
                         <th>isAvailable</th>
-                    </tr> 
+                    </tr>
                   </thead>
 
           <tbody>
@@ -57,7 +57,7 @@
         <?php
           }
          ?>
-         
+
                         </tbody>
          </table>
        </div>

@@ -2,6 +2,7 @@
 
 	<head>
 <?php include("header.php"); ?>
+<link href="style.css" rel="stylesheet" type="text/css">
 <style>
 
 textarea {
@@ -19,7 +20,7 @@ textarea:focus {
   	</head>
 
 	<body>
-    <center><h1>Community Chat</h1></center>
+
 		<?php
 			include("connect.php");
       if($_SESSION["uid"])
@@ -29,28 +30,28 @@ textarea:focus {
     ?>
     	<div class="container">
     <div class="row">
-    
+
         <div class="col-md-10 col-md-offset-1">
 
             <div class="panel panel-default panel-table">
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Panel Heading</h3>
+                    <h3 class="panel-title">Community Chat</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <button type="button" class="btn btn-sm btn-primary btn-create">Create New</button>
+                    <a href="processChatToHome.php" type="button" class="btn btn-sm btn-primary btn-create">Go Home</a>
                   </div>
                 </div>
               </div>
               <div class="panel-body">
-                <table class="table table-striped table-borderless table-info">
+                <table class="table table-borderless">
                   <thead>
                     <tr>
-                        <th class="hidden-xs">User Name</th>
+                        <th class="hidden-xs">Name</th>
 						<th>User Type</th>
 				        <th>Message</th>
-                    </tr> 
+                    </tr>
                   </thead>
                   <tbody>
 			<?php
@@ -59,9 +60,9 @@ textarea:focus {
 
 			?>
 				<tr>
-                           <td><?php echo $row[2] ?></td>
-					        <td><?php echo $row[3] ?></td>
-					        <td><?php echo $row[4] ?></td>
+                           <td><div class="alert alert-warning" role="alert"><?php echo $row[2] ?></div></td>
+					        <td><div class="alert alert-info" role="alert"><?php echo $row[3] ?></div></td>
+									<td><div class="alert alert-success" role="alert"><?php echo $row[4] ?></div></td>
                           </tr>
 
       <?php
@@ -86,11 +87,11 @@ textarea:focus {
 		<center> <?php echo $msg ?> </center>
 
 
-		
-                          
+
+
                         </tbody>
                 </table>
-            
+
               </div>
             </div>
 
