@@ -2,6 +2,14 @@
 <head>
   <?php include("header.php"); ?>
   <title>Book Club - Home</title>
+  <style>
+      #title{
+        font-family: 'Monoton', cursive;
+        font-size:10rem;
+         color: white;
+      }
+  </style>
+<link href="https://fonts.googleapis.com/css?family=Monoton&display=swap" rel="stylesheet">
 	<!-- <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300' rel='stylesheet' type='text/css'>
 
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -11,7 +19,7 @@
 
 </head>
 
-    <body>
+    <body style="background: #36465D;">
 
         <?php
 			include("connect.php");
@@ -49,12 +57,15 @@
               <ul class="nav navbar-nav navbar-right">
                 <li><a href="joinclub.php">Join a Club</a></li>
                 <li><a href="createclub.php">Create a club</a></li>
-                <li><a href="chat.php">Community Chat</a></li>
                 <li><a href="logout.php">Logout</a></li>
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
+
+        <div  >
+            <h1 id="title" style="margin-left: 25%; margin-top: 17.25%;">Join a Club!</h1>
+        </div>
 
         <?php
           }
@@ -94,6 +105,17 @@
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
+
+        <div style="text-align:center;">
+
+              <?php
+
+                  echo'<h1 id="title" style="margin-top: 17.5%;">'.$prow[0].'</h1>';
+
+               ?>
+
+
+        </div>
 
         <?php
 
