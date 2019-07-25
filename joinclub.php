@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Book Club</title>
+    <?php include("header.php"); ?>
   </head>
 
   <body>
