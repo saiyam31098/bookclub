@@ -15,7 +15,7 @@
   {
       $query = "insert into books_details (bname, category, bcid, bauthor, bowner, boid, bcondition, isAvailable) values ('".$bname."', '".$bcat."', ".$row[3].", '".$bauth."', '".$row[1]."', ".$row[0].", '".$bookcond."', '".$avail."')";
       mysqli_query($cn, $query);
-      header("location:lenderhomepg.php");
+      header("location:addBook.php?msg=Book added successfully!");
   }
 
 

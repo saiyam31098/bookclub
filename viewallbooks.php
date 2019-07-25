@@ -8,6 +8,7 @@
 	<body>
 
 		<?php
+		include("nav.php");
 			include("connect.php");
       $qr = "select lcid from lender_details where lid = ".$_SESSION["lid"]."";
       $res = mysqli_query($cn, $qr);

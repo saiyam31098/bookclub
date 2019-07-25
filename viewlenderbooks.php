@@ -14,9 +14,10 @@
 <?php include("header.php"); ?>
   	</head>
 
-	<body style="background: #36465D; margin-top:25px;">
+	<body style="background: #36465D;">
 
 		<?php
+		include("nav.php");
 			include("connect.php");
 			if($_REQUEST["del_id"]<>"")
 			{

@@ -22,6 +22,7 @@ textarea:focus {
 	<body>
 
 		<?php
+		include("nav.php");
 			include("connect.php");
       if($_SESSION["uid"])
       {

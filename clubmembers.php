@@ -4,16 +4,17 @@
 		<?php include("header.php"); ?>
   	</head>
 
-	<body>
+	<body style="background: #36465D">
 
 		<?php
+		include("nav.php");
 			include("connect.php");
       if($_SESSION["lcid"])
       {
           $qr = "select * from lender_details where lcid = ".$_SESSION["lcid"]."";
           $res = mysqli_query($cn, $qr);
     ?>
-   
+
       <div class="container">
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -36,7 +37,7 @@
                         <th class="hidden-xs">Member ID</th>
                         <th>Member Name</th>
                         <th>Member Email</th>
-                    </tr> 
+                    </tr>
                   </thead>
                    <tbody>
 
@@ -58,8 +59,8 @@
       }
       ?>
 
-                 
-                         
+
+
                         </tbody>
                 </table>
               </div>
