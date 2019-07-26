@@ -1,6 +1,8 @@
  <html>
   <head>
     <?php include("header.php"); ?>
+    <?php include("bnav.php"); ?>
+    <link href="style.css" rel="stylesheet" type="text/css">
   </head>
 
  	<body>
@@ -14,16 +16,31 @@
 
       ?>
 
-     <h1>Update Book Rating Here!</h1>
+     <center><h3 style="color: white;">Update Book Rating Here!</h3></center>
 
- 		<form name="frm1" method="post" action="processUpdateRating.php?oid=<?php echo $row[0] ?>">
-
-      Book Name = <input type="text" value="<?php echo $row[2] ?>" name="bname" readonly><br/>
-      New Rating = <input type="number" min="0" max="5" name="rating"><br/>
-
- 			<input type="submit" name="submit" value="Submit">
-
- 		</form>
+ <div class="container">
+   <div class="jumbotron">
+     <form name="frm1" method="post" action="processUpdateRating.php?oid=<?php echo $row[0] ?>">
+       <div class="form-group">
+     <label for="bname">Book Name</label>
+     <input type="text" class="form-control" value="<?php echo $row[2] ?>" id="exampleInputEmail1" placeholder="Book Name" name="bname" readonly>
+   </div>
+   <div class="form-group">
+  <label for="rating">New Rating</label>
+  <input type="number" class="form-control" min="0" max="5" id="exampleInputEmail1" name="rating">
+</div>
+   <center><button type="submit" id="sub" class="btn btn-default">Submit</button></center>
+   </form>
+   </div>
+   </div>
+   <center><div style="color:white;">
+   <?php
+   if(isset($_REQUEST["msg"])<>"")
+   {
+   echo $_REQUEST["msg"];
+   }
+   ?>
+   </div></center>
 
  	</body>
 

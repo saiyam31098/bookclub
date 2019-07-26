@@ -15,11 +15,11 @@
   $res = mysqli_query($cn,$qr1);
 
 	if($row = mysqli_fetch_array($res))
-  { 
+  {
       $qr2 = "UPDATE lender_details SET lcid=$row[0] WHERE l_email='".$_SESSION["uemail"]."'";
       mysqli_query($cn, $qr2);
   }
 
-	header("location:lenderhomepg.php");
+	header("location:lenderhomepg.php?msg=Club Created Successfully!");
 
 ?>

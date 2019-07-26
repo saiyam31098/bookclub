@@ -3,6 +3,13 @@
   <head>
     <title>Book Club - Home</title>
     <?php include("header.php"); ?>
+    <link href="style.css" rel="stylesheet" type="text/css">
+
+    <style>
+      .container {
+        margin-top: 55px;
+      }
+    </style>
 
     <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -14,6 +21,7 @@
     <body>
 
         <?php
+        include("bnav.php");
 
 			include("connect.php");
 
@@ -27,14 +35,6 @@
 
         ?>
 
-        <center>
-        	<h2>Welcome <?php echo $_SESSION["uname"] ?>!!</h2><br/>
-			       <a href="userprogrid.php">Products</a><br/>
-             <a href="orderhistory.php">Orders</a><br/>
-             <a href="chat.php">Community Chat</a><br/>
-             <a href="logout.php">Logout</a>
-        </center>
-
         <?php
 
 		if(isset($_REQUEST["msg"])<>"")
@@ -42,33 +42,55 @@
 
 		?>
 
-    <center><h4>Recommendations</h1></center>
-      <?php
-        $pr = "SELECT * FROM books_details order by OrderCount desc limit 0,3";
-        $res4 = mysqli_query($cn, $pr);
-        ?>
-        <table align="center" border="1">
-    			<tr>
-    				<th>Book ID</th>
-    				<th>Book Name</th>
-            <th>Category</th>
-            <th>Order Count</th>
-    			</tr>
+    <?php
+      $pr = "SELECT * FROM books_details order by OrderCount desc limit 0,3";
+      $res4 = mysqli_query($cn, $pr);
+      ?>
 
-    			<?php
-    				while($row4 = mysqli_fetch_array($res4))
-    				{
+    <div class="container">
+  <div class="row">
+      <div class="col-md-10 col-md-offset-1">
 
-    			?>
-    			<tr>
-    				<td><?php echo $row4[0] ?></td>
-    				<td><?php echo $row4[1] ?></td>
+          <div class="panel panel-default panel-table">
+            <div class="panel-heading">
+              <div class="row">
+                <div class="col col-xs-6">
+                  <h3 class="panel-title">Recommendations for you</h3>
+                </div>
+              </div>
+            </div>
+            <div class="panel-body">
+              <table class="table table-striped table-bordered table-list">
+                <thead>
+                  <tr>
+                      <th class="hidden-xs">Book ID</th>
+              				<th>Book Name</th>
+                      <th>Category</th>
+                      <th>Order Count</th>
+                  </tr>
+                </thead>
+
+        <tbody>
+          <?php
+            while($row4 = mysqli_fetch_array($res4))
+            {
+
+          ?>
+          <tr>
+            <td class="hidden-xs"><?php echo $row4[0] ?></td>
+            <td><?php echo $row4[1] ?></td>
             <td><?php echo $row4[2] ?></td>
             <td><?php echo $row4[10] ?></td>
           </tr>
           <?php
             }
       ?>
+      </tbody>
+       </table>
+     </div>
+          </div>
+
+</div></div></div>
     </body>
 
 </html>

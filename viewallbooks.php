@@ -28,7 +28,7 @@
                     <h3 class="panel-title">All Books</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <a href="lenderhomepg.php" type="button" class="btn btn-sm btn-primary btn-create">Go Back</a>
+                    <a href="lenderhomepg.php" type="button" class="btn btn-sm btn-primary btn-create">Go Home</a>
                   </div>
                 </div>
               </div>

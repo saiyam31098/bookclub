@@ -51,7 +51,7 @@
                     <h3 class="panel-title">Your Books</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <a type="button" href="lenderhomepg.php" class="btn btn-sm btn-primary btn-create">Go Back</a>
+                    <a type="button" href="lenderhomepg.php" class="btn btn-sm btn-primary btn-create">Go Home</a>
                   </div>
                 </div>
               </div>
@@ -76,7 +76,7 @@
 
                           <tr>
                             <td align="center">
-                              <a href="brand_update.php?brand_id=<?php echo $row1[0] ?>" class="btn btn-default"><em class="fa fa-pencil"></em></a>
+                              <a href="book_update.php?bid=<?php echo $row1[0] ?>" class="btn btn-default"><em class="fa fa-pencil"></em></a>
                               <a href="javascript:del(<?php echo $row1[0] ?>)" class="btn btn-danger"><em class="fa fa-trash"></em></a>
                             </td>
                             <td class="hidden-xs"><?php echo $row1[0] ?></td>

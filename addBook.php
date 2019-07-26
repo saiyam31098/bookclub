@@ -45,7 +45,7 @@
     <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Author" name="author">
   </div>
 	<div class="form-group">
-<label for="cat">Category</label>
+<label for="cond">Category</label>
 <select name="cond" class="form-control">
 									<option value="Low">Low</option>
 									<option value="Medium">Medium</option>

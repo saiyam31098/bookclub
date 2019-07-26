@@ -51,7 +51,7 @@
                     <h3 class="panel-title">Join A Club</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
-                    <a type="button" href="lenderhomepg.php" class="btn btn-sm btn-primary btn-create">Go Back</a>
+                    <a type="button" href="lenderhomepg.php" class="btn btn-sm btn-primary btn-create">Go Home</a>
                   </div>
                 </div>
               </div>
