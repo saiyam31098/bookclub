@@ -23,7 +23,7 @@
               <div class="panel-heading">
                 <div class="row">
                   <div class="col col-xs-6">
-                    <h3 class="panel-title">Panel Heading</h3>
+                    <h3 class="panel-title">Club Members</h3>
                   </div>
                   <div class="col col-xs-6 text-right">
                     <a href="lenderhomepg.php" type="button" class="btn btn-sm btn-primary btn-create">Go Back</a>

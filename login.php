@@ -3,10 +3,12 @@
 	<title>Book Club - LogIn</title>
 	<link rel="stylesheet" href="style.css">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,800,300' rel='stylesheet' type='text/css'>
-	
+
 </head>
 	<body>
-
+		<?php
+			include("connect.php");
+		?>
 
     <h1>Login Here!</h1>
 
